@@ -1,0 +1,173 @@
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script src="image-picker.js"></script>
+  <link rel="stylesheet" type="text/css" href="image-picker.css">
+	<style>
+body
+{
+  background-image: url("indexbg.jpg");
+  background-position: fixed;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: 100% 100%;
+}
+/* form starting stylings ------------------------------- */
+.group 			  { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+.inputs 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+.inputs:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.inputs:focus ~ label, .inputs:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#ffffff;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block;}
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+.inputs:focus ~ .bar:before, .inputs:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.inputs:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css');
+@font-face {
+    font-family: avengeanceregular;
+    src: url('css/fonts/avengeance-webfont.woff2') format('woff2'),
+    	 url('css/fonts/AVENGEANCE.otf') format('opentype'),
+         url('css/fonts/avengeance-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.container
+{	 border-radius: 25px;
+   border: 2px solid black;
+   background-color: rgba(0,0,0,0.7);
+    
+}
+.fonts
+{	
+	font-family: avengeanceregular;
+}
+.center
+{	text-align: center;
+}
+.alert
+{  color: red;
+}
+input {
+    font-family: "Times New Roman", Times, serif;
+}
+
+</style>
+
+</head>
+
+<body>
+	<div class="h-100 align-items-center">
+    <br><br>
+		<div class="fonts container col-md-4 col-xs-10 col-sm-8">
+  <br>
+  <h2 class="center"><font color="white">Sign up</font><br></h2><br>	
+  <span class="alert"><%= message %></span><br><br>
+ <form action="http://127.0.0.1:9000/updatedate" method=post>
+    
+    <div class="group">      
+      <input type="text" name="name1" class="inputs" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Event Name</label>
+    </div>
+    <div class="group">      
+      <input type="date" name="day1" class="inputs" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+    </div>
+    
+    <input type="submit" class="btn btn-primary btn-block">
+  </form>
+  <br><br>
+</div>
+</div>
+<br><br>
+</body>
+</html>

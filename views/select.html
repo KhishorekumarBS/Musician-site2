@@ -1,0 +1,99 @@
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Noticia Text' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+  	body
+	{	background-image: url("mainbg.jpg");
+    	background-attachment: fixed;
+    	background-repeat: no-repeat;
+    	background-origin: content-box;
+    	background-size: 100% 100%;
+	}
+	.news-thumb {
+  background-color: rgba(255,255,255,0.8);
+  padding: 15px;
+}
+  </style>
+</head>
+<body>
+	<!--Navbar-->
+	   <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                       
+      </button>
+      <a class="navbar-brand" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="home.html">Add Event</a></li>
+        <li><a href="#">List Events</a></li>
+        <li><a href="#">Update News</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-facebook-square" style="font-size:20px"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" style="font-size:20px"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--End Navbar-->
+	<div class="container news-thumb">
+		<table class="table table-bordered table-dark table-hover" id="table">
+		  <thead>
+    		<tr>
+      			<th scope="col">#</th>
+      			<th scope="col">First</th>
+      			<th scope="col">Last</th>
+      			<th scope="col">Handle</th>
+   		    </tr>
+  		  </thead>
+  		  <tbody>
+    		<tr>
+    		    <th scope="row">1</th>
+      	  		<td>Mark</td>
+      	  		<td>Otto</td>
+      			<td>@mdo</td>
+   			 </tr>
+    		<tr>
+      			<th scope="row">2</th>
+      			<td>Jacob</td>
+      			<td>Thornton</td>
+      			<td>@fat</td>
+    		</tr>
+  		   </tbody>
+		</table>
+		<div class="display"></div>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function()
+  {    $.ajax({
+            type: "POST",
+            url: "/selectall",
+            success: function(docs) {
+                  var i,html;
+                  $.each(docs, function (i) {
+                          var temp=i+1;
+                            html += '<tr><td>' +temp+ '</td><td>' + eval(JSON.stringify(docs[i]._id)) + '</td><td>' + eval(JSON.stringify(docs[i].dovenue)) + '</td><td>' + eval(JSON.stringify(docs[i].Venue)) + '</td></tr>';
+                          }); 
+                  $('#mytable tr').first().after(html);
+                },
+            error: function(jqXHR, textStatus, err) {
+                alert('Oops! Something has gone wrong. Check your Connection')
+            }
+            });
+
+  });
+</script>
+</body>
+</html>

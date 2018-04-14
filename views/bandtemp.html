@@ -1,0 +1,408 @@
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Noticia Text' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:100,200,300,400,500,700,800,900" rel="stylesheet">
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+</head>
+<style>
+  
+  body
+  { background-image: url("mainbg.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      background-size: 100% 100%;
+  }
+  .margin
+  {
+    margin-left: 150px;
+  }
+  .noticia
+  { font-family: 'Noticia Text';
+    font-style: italic;
+    
+  }
+  .change
+  { height: 100px;
+  }
+.news {
+  background-color: rgba(0,0,0,0);
+}
+.news-thumb {
+  background-color: rgba(0,0,0,0.8);
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.news-thumb2 {
+  background-color: rgba(255,255,255,0.8);
+}
+.news-thumb3 {
+  background-color: rgb(0,0,0);
+}
+.verylarge
+{ font-size: 70;
+  
+}
+.large
+{ font-size: 30;
+  font-family: 'Abel';
+  font-weight: bold;
+}
+.highlight
+{ background-color: #ffffff;
+}
+.rightalign
+{ float: right;
+}
+audio
+{ width: 100%;
+}
+.full
+{
+  width: 100%;  
+}
+.small
+{ font-size:30;
+}
+@media (max-width: 7px) { /* use the max to specify at each container level */
+    table {    
+        width:6px;  /* adjust to desired wrapping */
+        display:table;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+    }
+}
+
+  
+  .carousel{
+    background: white;
+    margin-top: 20px;
+}
+.carousel .item{
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+  margin: 20px;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+}
+.carousel-indicators .active {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: grey;
+}
+
+</style>
+<body>
+<!-- NAVBAR-->
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                       
+      </button>
+      <a class="navbar-brand" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="home.html">Home</a></li>
+        <li class="dropdown dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bio</a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="bio.html">Bio</a></li>
+                <li><a href="Gharana.html">Gharana</a></li>
+             </ul>
+        </li>
+        <li><a href="#">Events</a></li>
+        <li class="dropdown dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Music</a>
+            <ul class="dropdown-menu">
+              <li><a href="band.html">Band</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="#">Discography</a></li>
+             </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
+            <ul class="dropdown-menu">
+              <li><a href="GALLERY.html">Playing with Stalwarts</a></li>
+                <li><a href="#">Photos</a></li>
+             </ul>
+        </li>
+        <li><a href="#">Shows and Tours</a></li>
+        <li><a href="project.html">Projects</a></li>
+         <li><a href="musician/mus.html">Sohini Sangeet Academy</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-facebook-square" style="font-size:20px"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" style="font-size:20px"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--end navbar-->
+
+<div class="container">
+  <br><br><br><br>
+
+        <div>
+          <font  size="+7"color="#9B903F"><span class="highlight">PANDIT BINAY PATHAK</span></font>
+          
+        </div>
+        <div class="noticia small">
+          <font size="+2" color=white>Music of the soul</font>
+        </div><br><br>
+                
+</div>
+<div class="container">   
+<!--image for intro-->              
+<!--first content-->
+<div class="news-thumb row container-fluid">
+    
+      <div class="col-md-6 col-xs-10 col-sm-8">
+         
+              <font size ="4+" color="white">
+                <span>
+            <font size="6+" color="grey">Pandit Binay Pathak’s life is in music and music fills his life</font><br>
+            <font size=8 color="#BCB269">__</font><br>
+            
+                                The subtleties of classical raag are created in
+                  Pt. Binay’s soulful interpretation of the emotional mood, 
+                  the rasa-bhav, as each raag is sung. Pt Pathak’s deep musical knowledge,
+                  technical virtuosity and sensitive vocal interpretation 
+                  brings the essence of each raaga alive in performance
+                  creating an extraordinary musical experience  in every performance.<br><br>
+                  Pt. Pathak revealed a rare talent for music from early childhood and began 
+                  his musical training at the age of six under the instruction of his father, 
+                  legendary Dhrupadist and Sitarist, the late Pandit Balram Pathak. 
+                  Pt. Binay was born into a music gharana dating back to legendary dhrupadist, 
+                  Pandit Gopal Nayak in 16th century India. 
+                  Pt. Pathak’s family is filled with extraordinarily talented musicians in a 
+                  lineage spanning generations of dhrupadists, sitarists and veena players.<br><br>
+                                    
+
+                <br>
+                  </span>
+      
+        </div>
+       
+      <div class="col-md-6 col-xs-12 col-sm-6">
+          <img src = "pt.jpg" alt = "Binay" border = "3" align = "right" class="img-responsive"/> 
+    </div>
+    <div class="row container-fluid">
+      <div class="col-md-12 col-xs-12 col-sm-12">
+                                    Pt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his life</font>
+</div></div>
+ </font>
+<div class="container">
+<div id="card"> 
+  <div class="front" style="background-color: white;"> 
+    Summa<br><br>Pt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his lifePt. Binay’s classical training was rigorous with a daily routine of twelve to 
+                  fourteen hours of dedicated riyaz. Such was the demand of the father from his son! 
+                  Under his father’s guidance Pt. Binay studied voice, tabla, sitar and harmonium soon 
+                  excelling as a singer of Classical, Ghazal and Bhajan and composer whose original compositions
+                  are based primarily on traditional raagas. Hearing his breathtaking harmonium solos and
+                  mesmerizing Classical Raaga and Ghazals, audiences are spell-bound. 
+                  Pandit Binay’s ghazals are captivating in their sensuous expression of swara and laya evoking an elixir of love,
+                  passion and poetry in the hearts of his audience. 
+                  Although he is a Science Graduate of Calcutta University,
+                  Pt. Binay Pathak studied Hindustani Classical music in a timeless,
+                  traditional and rigorous way in a traditional gharana. Whether performing, 
+                  composing, teaching, working in film and television or appearing on All India Radio and Television,
+                  Pt. Binay’s life is music and music truly is his life
+  </div> 
+  <div class="back" style="background-color: yellow;">
+    Back
+  </div> 
+</div>
+</div>
+<script type="text/javascript">
+  $("#card").flip({
+  axis: 'y',
+  trigger: 'hover'
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

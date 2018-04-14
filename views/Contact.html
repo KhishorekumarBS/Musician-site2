@@ -1,0 +1,214 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</script>
+<script>
+
+$(document).ready(function(){
+       
+        $("#map").show();
+        $("#map1").hide();
+    });
+$(document).ready(function(){
+    $(".p01").click(function(){
+   
+        $("#map").hide();
+        $("#map1").show();
+  
+     });
+     $(".p02").click(function(){
+   
+        $("#map1").hide();
+        $("#map").show();
+  
+     });
+});
+
+</script>
+<style>
+  body
+  { background-image: url("mainbg.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      background-size: 100% 100%;
+  }
+ .news-thumb {
+             padding-top: 25px;
+             padding-bottom: 25px;
+              padding-left: 30px;
+             padding-right: 20px;
+       }
+ .news-thumb-small {
+             padding-top: 5px;
+             padding-bottom: 5px;
+              padding-left: 10px;
+             padding-right: 10px;
+       }
+.zoomeffect:hover {
+            transform: scale(1.1,1.1);
+            font-weight: bold;
+       }
+
+.pointer {cursor: pointer;}
+ @font-face {
+    font-family: palatino;
+    src:
+       url('../POBI___R.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.verylarge
+{ font-size: 70;
+  font-family: palatino;
+  
+}
+h1
+{
+font-family: "Abel";
+font-style: italic;
+font-size: 70px;
+font-weight: bold;
+color:#606060;
+
+}
+h2
+{
+font-family: "Abel";
+font-style: normal;
+color:#9B903F;
+font-size:60px;
+
+}
+h3
+{
+    
+    font-size:1.7em;
+    color: #291405;
+    
+    
+}
+
+.highlight
+{ background-color: #ffffff;
+  font-size: 70;
+}
+h4
+{
+ text-align:center;
+ font-style:bold;
+ color:Black;
+ font-family: "Noticia Text";
+}
+.noticia
+	{	font-family: 'Noticia Text';
+		font-style: italic;
+		
+	}
+.small
+{	font-size:30;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR-->
+     <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                       
+      </button>
+      <a class="navbar-brand" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li class="dropdown dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bio</a>
+            <ul class="dropdown-menu">
+              <li><a href="/bio">Bio</a></li>
+                <li><a href="/gharana">Gharana</a></li>
+             </ul>
+        </li>
+        <li><a href="#">Events</a></li>
+        <li class="dropdown dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Music</a>
+            <ul class="dropdown-menu">
+              <li><a href="/band">Band</a></li>
+                <li><a href="/video">Video</a></li>
+                <li><a href="/discography">Discography</a></li>
+             </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
+            <ul class="dropdown-menu">
+              <li><a href="/playing-with-stalwarts">Playing with Stalwarts</a></li>
+                <li><a href="#">Photos</a></li>
+             </ul>
+        </li>
+        <li><a href="#">Shows and Tours</a></li>
+        <li><a href="/project">Projects</a></li>
+        <li><a href="/sohini-sangeet-academy">Sohini Sangeet Academy</a></li>
+        <li><a href="#">News</a></li>
+        <li class="active"><a href="/contact">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-facebook-square" style="font-size:20px"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" style="font-size:20px"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--end navbar-->
+<br><br>
+<div class="container">
+   <div class="verylarge container">
+          <center><font color="#291405">Contact Us</font></center>
+        </div>  
+<br>
+
+ <div class="row">
+
+     <div class="col-md-6 col-xs-12 col-sm-12">
+      <center><span style="font-size: 2em;color: #8B4513;font-style: italic;font-weight: bold;"">Address&nbsp;<i class="fa fa-map-marker" style="font-size:24px;color: #8B4513;"></i></span><br>
+          <div class="p02  pointer zoomeffect news-thumb"> 
+            <h3>1908,Manchester Road<br>Sacramento,CA 95815</h3></div><br><br>
+          <div class="p01 zoomeffect  pointer news-thumb"><h3>5135,Ward Lane<br>Rocklin,CA 95677</h3><br></div>
+        </center>
+     </div>  
+
+     <div class=" col-md-1 col-xs-12 col-sm-12"><br><br></div>
+     <div class="col-md-5 col-xs-12 col-sm-12" style="background-color: transparent;align-items: center;text-align: center;">
+          <div id="map">
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3117.9129634797523!2d-121.4237664851887!3d38.60487347173967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ada2039a20a5f%3A0xa42f5e711162df28!2s1908+Manchester+Rd%2C+Sacramento%2C+CA+95815%2C+USA!5e0!3m2!1sen!2sin!4v1519658514339"
+           width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+          
+         <div id="map1">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3109.8493964544445!2d-121.22646078518268!3d38.790086760868405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b1f1b0d8b8d65%3A0xd653aa86581fbfbf!2s5135+Ward+Ln%2C+Rocklin%2C+CA+95677%2C+USA!5e0!3m2!1sen!2sin!4v1519659491198"
+              width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+          </div>
+ </div><br><br>
+ 
+          
+ <br><br>
+ <div class="row">
+        <div class="panel panel-default news-thumb-small col-md-3"><h4><b><i>School</i></b> : 9162173259 </h4></div>
+        <div class="panel panel-default news-thumb-small col-md-3"><h4><b><i>Pt.Pathak</i></b> : 9169956499 </h4></div>
+        <div class="panel panel-default news-thumb-small col-md-6"><h4><b><i>E-mail</i></b> : sohinisangeetmusic@gmail.com </h4></div>
+ </div>
+  </div>     
+ 
+</body>
+</html>

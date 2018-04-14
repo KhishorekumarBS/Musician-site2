@@ -1,0 +1,209 @@
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Noticia Text' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  body
+  { background-image: url("mainbg.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      background-size: 100% 100%;
+  }
+ .news-thumb {
+            background-color: rgba(0,0,0,0.8);
+              padding-top: 15px;
+             padding-bottom: 15px;
+              padding-left: 5px;
+             padding-right: 5px;
+             margin-bottom: 30px;
+       }
+       .noticia
+  { font-family: 'Noticia Text';
+    font-style: italic;
+    
+  }
+  .highlight
+{ background-color: #ffffff;
+}
+
+.verylarge
+{ font-size: 70;
+  
+}
+.img-thumb
+{
+  height: 80px;
+  padding-bottom: 10px;
+}
+
+.small
+{ font-size:30;
+}
+table
+{
+  cursor: pointer;
+}
+</style>
+<body>
+  <!-- NAVBAR-->
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                       
+      </button>
+      <a class="navbar-brand" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li class="dropdown dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bio</a>
+            <ul class="dropdown-menu">
+              <li><a href="/bio">Bio</a></li>
+                <li><a href="/gharana">Gharana</a></li>
+             </ul>
+        </li>
+        <li><a href="#">Events</a></li>
+        <li class="dropdown dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Music</a>
+            <ul class="dropdown-menu">
+              <li><a href="/band">Band</a></li>
+                <li><a href="/video">Video</a></li>
+                <li><a href="/discography">Discography</a></li>
+             </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
+            <ul class="dropdown-menu">
+              <li><a href="/playing-with-stalwarts">Playing with Stalwarts</a></li>
+                <li><a href="/photos">Photos</a></li>
+             </ul>
+        </li>
+        <li><a href="#">Shows and Tours</a></li>
+        <li><a href="/project">Projects</a></li>
+        <li><a href="/sohini-sangeet-academy">Sohini Sangeet Academy</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-facebook-square" style="font-size:20px"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" style="font-size:20px"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--end navbar-->
+
+<div class="container">
+
+  <br><br><br><br><br><br>
+
+        <div class="verylarge">
+          <font color="#9B903F"><span class="highlight">PANDIT BINAY PATHAK</span></font>
+        </div>
+        <div class="noticia small">
+          <font color=#f9f9f9>Sangeet Suromani Guru</font>
+        </div>
+      <br><br><br>
+  <div class="row news-thumb">
+  <div  class="col-md-8">
+    <div id="video1">
+      <h2>Raag Music to perform at a festival</h2>
+      <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MIol6Y9MF4o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div id="video2">
+      <h2>Harmonium Solo, Pt.Binay Pathak</h2>
+      <div class="embed-responsive embed-responsive-16by9">
+      <iframe width="400" height="344" src="https://www.youtube.com/embed/ZcULIFAXYVM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div id="video3">
+      <h2>Binay Pathak at Chicago</h2>
+      <div class="embed-responsive embed-responsive-16by9">
+      <iframe width="400" height="344" src="https://www.youtube.com/embed/IOK-KXSdruA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <br>
+    <table>
+      <tr class="clickfirst">
+        <td>
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+          <img src="videopic1.jpeg" class="img-thumb">
+        </div>
+        </td>
+        <td>
+        <div class="col-md-8 col-sm-8 col-lg-8 col-xs-8 clickfirst"">
+            Raag Music to perform at a festival
+        </div>
+        </td>
+      </tr>
+      <tr class="clicksecond">
+        <td>
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 clicksecond">
+          <img src="videopic2.jpeg" class="img-thumb">
+        </div>
+        </td>
+        <td>
+        <div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+            Harmonium Solo, Pt.Binay Pathak
+        </div>
+        </td>
+      </tr>
+      <tr class="clickthird">
+        <td>
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 clickthird">
+          <img src="videopic3 .jpeg" class="img-thumb">
+        </div>
+        </td>
+        <td>
+        <div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+            Binay Pathak at Chicago
+        </div>
+        </td>
+      </tr>
+
+  </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  $("#video1").show();
+  $("#video2").hide();
+  $("#video3").hide();
+  $(".clickfirst").click(function(){
+        $("#video1").show();
+    $("#video2").hide();
+    $("#video3").hide();
+  
+      });
+    $(".clicksecond").click(function(){
+        $("#video1").hide();
+    $("#video2").show();
+    $("#video3").hide();
+     });
+  $(".clickthird").click(function(){
+        $("#video1").hide();
+    $("#video2").hide();
+    $("#video3").show();
+     });
+
+});
+</script>
+</body>
+</html>

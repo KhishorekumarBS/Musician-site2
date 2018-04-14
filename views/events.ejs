@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Noticia Text' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    body
+  { background-image: url("mainbg.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      background-size: 100% 100%;
+  }
+  .news-thumb {
+  background-color: rgba(0,0,0,0.8);
+  padding: 15px;
+}
+/* form starting stylings ------------------------------- */
+.group        { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+.inputs         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+.inputs:focus     { outline:none; }
+
+/* LABEL ======================================= */
+label          {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.inputs:focus ~ label, .inputs:valid ~ label    {
+  top:-20px;
+  font-size:14px;
+  color:#ffffff;
+}
+
+/* BOTTOM BARS ================================= */
+.bar  { position:relative; display:block;}
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+.inputs:focus ~ .bar:before, .inputs:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+.alert
+{
+  color: red;
+  font-size: 20;
+}
+/* active state */
+.inputs:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css');
+</style>
+
+
+</head>
+
+<body>
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                       
+      </button>
+      <a class="navbar-brand" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="home.html">Add Event</a></li>
+        <li><a href="/selectall">List Events</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-facebook-square" style="font-size:20px"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" style="font-size:20px"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+   
+   
+<br> <br>
+  <div class="h-95 row align-items-center">
+      <div class="col-md-4 col-xs-1 col-sm-2"></div> 
+    <div class="container col-md-4 col-xs-10 col-sm-8 news-thumb" style="text-align: center;">
+      <br>
+      
+  <h2 style="font-style: italic;font-weight: bold;"><font color="white">Add Event</font><br></h2><br> 
+<span class="alert"><%= message %></span><br><br>
+<form action="/eventsenter" method=post>
+    
+    <div class="group">      
+      <input type="text" name="name" class="inputs" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Event Name</label>
+    </div>
+    <div class="group">      
+      <input type="date" name="day" class="inputs" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+    </div>
+    
+    <div class="group">      
+      <input type="text" name="venue" class="inputs" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Venue</label>
+    </div>
+    <input type="submit" class="btn btn-primary btn-block">
+  </form>     <br> <br>
+  
+</div>
+<div class="col-md-4 col-xs-1 col-sm-2"></div>
+</div>
+</body>
+</html>
