@@ -90,6 +90,21 @@ app.get('/discography', function(req, res){
  		console.log(resolvedPath);
  		return res.sendFile(resolvedPath);
 });
+
+app.get('/shows', function(req, res){
+  var filePath = "./views/Shows.html"
+    var resolvedPath = path.resolve(filePath);
+    console.log(resolvedPath);
+    return res.sendFile(resolvedPath);
+});
+
+app.get('/events', function(req, res){
+  var filePath = "./views/events-tours.html"
+    var resolvedPath = path.resolve(filePath);
+    console.log(resolvedPath);
+    return res.sendFile(resolvedPath);
+});
+
 app.get('/playing-with-stalwarts', function(req, res){
   var filePath = "./views/Playing-with-stalwarts.html"
  		var resolvedPath = path.resolve(filePath);
