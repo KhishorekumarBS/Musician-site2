@@ -117,7 +117,19 @@ app.get('/photos', function(req, res){
  		console.log(resolvedPath);
  		return res.sendFile(resolvedPath);
 });
+app.get('/news', function(req, res){
+  var filePath = "./views/News.html"
+    var resolvedPath = path.resolve(filePath);
+    console.log(resolvedPath);
+    return res.sendFile(resolvedPath);
+});
 
+app.get('/tours', function(req, res){
+  var filePath = "./views/Tours.html"
+    var resolvedPath = path.resolve(filePath);
+    console.log(resolvedPath);
+    return res.sendFile(resolvedPath);
+});
 
 app.get('/eventsinput', function(req, res){
   res.render('events' , { message:'Enter Event Details' });

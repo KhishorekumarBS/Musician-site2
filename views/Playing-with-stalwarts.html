@@ -1,43 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Gallery</title>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Noticia Text' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-
-  	 body {
-      	    background-image: url(mainbg.jpg);
-      	    background-attachment: fixed;
-      	    background-repeat: no-repeat;
-      	    background-size :100% 100%;
-            padding-bottom: 3rem;
-           	color: #291405;
-           }
-	
-	img:hover{
-    transform: scale(1.07,1.07);
-    }
-	
-	.caption
-	{
-		padding-top: 50px;
-	
-		font-size: 1.5em;
-	}
-	.caption:hover{
-    transform: scale(1.02,1.02);
-
-    }
-    
-@font-face {
+</head>
+<style>
+  body
+  { background-image: url("mainbg.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      background-size: 100% 100%;
+      color: #291405;
+  }
+  .news-thumb {
+ 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+img:hover
+{
+   transform: scale(1.08,1.08);
+}
+ @font-face {
     font-family: palatino;
     src:
        url('../POBI___R.otf') format('opentype');
@@ -46,15 +36,26 @@
 
 }
 .verylarge
-{ font-size: 4em;
+{ font-size: 70;
   font-family: palatino;
   
+} .noticia
+  { font-family: 'Noticia Text';
+    font-style: italic;
+  }
+ .small
+{ font-size:35;
 }
-	</style>
-	
-  </head>
-  <body>
-  	<!-- NAVBAR--><nav class="navbar navbar-inverse">
+.highlight
+{ background-color: #ffffff;
+}
+p{
+  font-weight: bold;
+  font-size: 1.3em;
+}
+</style>
+<body>
+  <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -92,10 +93,10 @@
                 <li><a href="/photos">Photos</a></li>
              </ul>
         </li>
-        <li><a href="#">Tours</a></li>
+        <li><a href="/tours">Tours</a></li>
         <li><a href="/project">Projects</a></li>
         <li><a href="/sohini-sangeet-academy">Sohini Sangeet Academy</a></li>
-        <li><a href="#">News</a></li>
+        <li><a href="/news">News</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -106,102 +107,154 @@
   </div>
 </nav>
 
-<!--end navbar-->
-	<div class="container">
-	<br>
-		<div class="verylarge container" style="padding-bottom: 0px;">
-          <center><font color="#291405" style="font-size: 70">Pandit Binay Pathak <br>and Stalwarts on Hindustani Classical</font></center>
-        </div>	</br></br>
+<br>
+<div class="container">
+   <div class="verylarge container" style="padding-bottom: 0px;">
+          <center><font color="#291405">Playing with Stalwarts</font></center>
+        </div>
+    <div class="container news-thumb">
+           <br>
+
+    <div class="row" style="text-align: center">
+      <div class="col-md-4">
+        <img src="music1.jpg" class="center-block" width=350 height=230>
+        <p>Pt. Bhimsen Joshi  accompanied on harmonium by 
+  Pt. Binay Pathak.   The Dover Lane Conference ~ 1980</p>
+      </div>
+      <div class="col-md-4">
+        <img src="music2.jpg" class="center-block" width=350 height=230>
+        <p>  Pt. Binay Pathak on harmonium with Pt. Jasraj
+                  The Dover Lane Conference</p>
+      </div>
+      <div class="col-md-4">
+        <img src="music3.jpg" class="center-block" width=350 height=230>
+        <p>  Pt. Rajan & Sajan Misra with Pt. Binay Pathak on
+    harmonium at The Dover Lane Music Conference</p>
+      </div>
     </div>
-	<div class="row">
-		<div class="col-sm-1"></div>
-		<div class="col-sm-6">
-			<img class="img-thumbnail responsive" src="music1.jpg" alt="Pt. Bhimsen Joshi  accompanied on harmonium by Pt. Binay Pathak.  The Dover Lane Conference ~ 1980" width="700" height="600">
-		</div>
-		<div class="col-sm-4">
-			<div class="row caption">
-				<div class="container-fluid">
-					<center>Pt. Bhimsen Joshi  accompanied on harmonium by Pt. Binay Pathak. The Dover Lane Conference ~ 1980</center>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-1"></div>
-	</div>
-	
-	</br></br>
-	
-	<div class="row">
-		<div class="col-sm-1"></div>
-		<div class="col-sm-4">
-			<div class="row caption">
-				<center>Pt. Binay Pathak on harmonium with Pt. Jasraj. The Dover Lane Conference</center>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<img class="img-thumbnail responsive" src="music2.jpg" alt="Pt. Binay Pathak on harmonium with Pt. Jasraj.  The Dover Lane Conference" width="700" height="600">
-		</div>
-		<div class="col-sm-1"></div>
-	</div>
-	
-	</br></br>
-	
-	<div class="row">
-		<div class="col-sm-1"></div>
-		<div class="col-sm-6">
-			<img class="img-thumbnail responsive" src="music3.jpg" alt="Pt. Rajan & Sajan Misra with Pt. Binay Pathak on harmonium at The Dover Lane Music Conference" width="700" height="600">
-		</div>
-		<div class="col-sm-4">
-			<div class="row caption">
-				<center>Pt. Rajan & Sajan Misra with Pt. Binay Pathak on harmonium at The Dover Lane Music Conference</center>
-			</div>
-		</div>
-		<div class="col-sm-1"></div>
-	</div>
-	
-	</br></br>
-	
-	<div class="row">
-		<div class="col-sm-1"></div>
-		<div class="col-sm-4">
-			<div class="row caption">
-				<center>Pt. Binay accompanying Ust AllaRakha<br> & Fazal Quereshi</center>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<img class="img-thumbnail responsive" src="music4.jpg" alt="Pt Binay accompanying Ust AllaRakha & Fazal Quereshi" width="700" height="600">
-		</div>
-		<div class="col-sm-1"></div>
-	</div>
-	</br></br>
-	
-	<div class="row">
-		<div class="col-sm-1"></div>
-		<div class="col-sm-6">
-			<img class="img-thumbnail responsive" src="music5.jpg" alt="With Smt. Giriji Devi" width="700" height="600">
-		</div>
-		<div class="col-sm-4">
-			<div class="row caption">
-				<center>With Smt. Giriji Devi</center>
-			</div>
-		</div>
-		<div class="col-sm-1"></div>
-	</div>
-	
-	</br></br>
-	
-	<div class="row">
-		<div class="col-sm-1"></div>
-		<div class="col-sm-4">
-			<div class="row caption">
-				<center>With Ustad Zakir Hussain</center>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<img class="img-thumbnail responsive" src="music6c.jpg" alt="With Ustad Zakir Hussain" width="700" height="600">
-		</div>
-		<div class="col-sm-1"></div>
-	</div>
-	</br></br>
-	
-  </body>
-  </html>
+    <br>
+<div class="row" style="text-align: center">
+      <div class="col-md-4">
+        <img src="music4.jpg" class="center-block" width=350 height=230>
+        <p>Pt Binay accompanying Ust AllaRakha & Fazal Quereshi</p>
+      </div>
+      <div class="col-md-4">
+        <img src="music5.jpg" class="center-block"  width=400 height=230>
+        <p> With Smt. Giriji Devi</p>
+      </div>
+      <div class="col-md-4">
+        <img src="music6c.jpg" class="center-block" height=230>
+        <p>With Ustad Zakir Hussain</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    <div class="row" style="text-align: center">
+      <div class="col-md-4">
+        <img src="image111.jpg" class="center-block">
+        <p>With Zakir Hussain & Asish Khan</p>
+      </div>
+      <div class="col-md-4">
+        <img src="image112.jpg" class="center-block">
+        <p>With Ustad Ali Akbar Khan and Pt. Ravi Shankar</p>
+      </div>
+      <div class="col-md-4">
+        <img src="image113.jpg" class="center-block">
+        <p>With Ustad Ali Akbar Khan</p>
+      </div>
+    </div>
+
+    <div class="row" style="text-align: center">
+      <div class="col-md-4">
+        <img src="image114.jpg" class="center-block">
+        <p>With Ghazal Maestro Mehndi Hassan and Smt. Gupta</p>
+      </div>
+      <div class="col-md-4">
+        <img src="image1116.jpg" class="center-block">
+        <p>With Jazz Saxophonist George Brooks</p>
+      </div>
+      <div class="col-md-4">
+        <img src="image11.jpg" class="center-block">
+        <p>With Alla Rakha</p>
+      </div>
+    </div>
+
+     <div class="row" style="text-align: center">
+      <div class="col-md-4">
+        <img src="image1114.jpg" class="center-block">
+        <p>With Zakir Hussain  </p>
+      </div>
+      <div class="col-md-4">
+        <img src="image1112.jpg" class="center-block">
+        <p>With  Pt. Chitresh Das </p>
+      </div>
+      <div class="col-md-4">
+        <img src="image1113.jpg" class="center-block">
+        <p>With Jason Samuels Smith</p>
+      </div>
+    </div>
+
+    <div class="row" style="text-align: center">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <img src="image119.jpg">
+        <img src="image1110.jpg">
+        <img src="image118.jpg">
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row" style="text-align: center">
+      <div class="col-md-12">
+        <p>With Matthew Montfort, Mariah Parker, Abbos Kosimov, Joe Fajen</p>
+      </div>
+    </div><br>
+    
+    <div class="row" style="text-align: center">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <img src="image117.jpg">
+        <img src="image116.jpg">
+        <img src="image1111.jpg">
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row" style="text-align: center">
+      <div class="col-md-12">
+        <p>Three Stages Concert: Folsom CA <br>
+        Left to Right George Brooks, Vishal Nagar, Pt. Pathak, Matthew Montfort & Abbos Kosimov</p>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
