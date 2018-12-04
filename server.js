@@ -66,6 +66,13 @@ app.get('/bio', function(req, res){
  		console.log(resolvedPath);
  		return res.sendFile(resolvedPath);
 });
+app.get('/upcoming_events', function(req, res){
+  var filePath = "./views/upcoming_events.html"
+    var resolvedPath = path.resolve(filePath);
+    console.log(resolvedPath);
+    return res.sendFile(resolvedPath);
+});
+
 app.get('/contact', function(req, res){
   var filePath = "./views/Contact.html"
  		var resolvedPath = path.resolve(filePath);
@@ -98,8 +105,8 @@ app.get('/shows', function(req, res){
     return res.sendFile(resolvedPath);
 });
 
-app.get('/events', function(req, res){
-  var filePath = "./views/events-tours.html"
+app.get('/past_events', function(req, res){
+  var filePath = "./views/past_events.html"
     var resolvedPath = path.resolve(filePath);
     console.log(resolvedPath);
     return res.sendFile(resolvedPath);
